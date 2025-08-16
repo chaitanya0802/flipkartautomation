@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_COMPOSE_VERSION = '1.29.2' // optional: pin docker-compose version
+        DOCKER_COMPOSE_VERSION = '1.29.2' 
     }
 
     stages {
@@ -14,8 +14,8 @@ pipeline {
 
         stage('Build with Docker Compose') {
             steps {
-                sh 'docker-compose down || true'
-                sh 'docker-compose up --build -d'
+                bat 'docker-compose down || true'
+                bat 'docker-compose up --build -d'
             }
         }
 
