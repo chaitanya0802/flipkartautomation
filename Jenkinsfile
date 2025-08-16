@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout from GitHub') {
             steps {
-                git branch: 'main', url: 'https://github.com/jstestingacademy/flipkartnew.git'
+                git branch: 'main', url: 'https://github.com/chaitanya0802/flipkartautomation.git'
             }
         }
 
