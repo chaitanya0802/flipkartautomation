@@ -22,7 +22,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 // If your container runs tests automatically, just wait for logs
-                sh 'docker-compose logs --follow'
+                bat 'docker-compose logs --follow'
                 // OR if you need to run a specific command inside the container:
                 // sh 'docker exec flipkart-automation-container java -jar app.jar'
             }
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Clean Up') {
             steps {
-                sh 'docker-compose down'
+                bat 'docker-compose down'
             }
         }
     }
